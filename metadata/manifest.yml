@@ -58,6 +58,19 @@ Publishes:
     Type: "NET_TCP:httpd-proxy-info"
   publish-gear-endpoint:
     Type: "NET_TCP:gear-endpoint-info"
+Subscribes:
+  set-env:
+    Type: "ENV:*"
+    Required: false
+  set-mysql-connection-info:
+    Type: "NET_TCP:db:mysql"
+    Required : false
+  set-postgres-connection-info:
+    Type: "NET_TCP:db:postgres"
+    Required : false
+  set-doc-url:
+    Type: "STRING:urlpath"
+Required : false    
 Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: PORT
